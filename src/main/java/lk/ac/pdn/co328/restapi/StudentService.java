@@ -7,12 +7,12 @@ import org.jboss.resteasy.util.HttpResponseCodes;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import lk.ac.pdn.co328.studentSystem.arraylistimplementation.ArraylistStudentRegister;
+import lk.ac.pdn.co328.studentSystem.dbimplementation.DerbyStudentRegister;
 
 @Path("rest")
 public class StudentService
 {
-    private static StudentRegister register = new ArraylistStudentRegister();
+    private static StudentRegister register = new DerbyStudentRegister();
 
     @GET
     @Path("student/{id}")
